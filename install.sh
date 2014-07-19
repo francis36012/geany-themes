@@ -10,7 +10,7 @@ if [ $EUID -ne 0 ] ; then
 	do
 		BNAME=$(basename $SCHEME)
 		echo " => $BNAME"
-		cp $SCHEME $USRCSDIR
+		cp -v $SCHEME $USRCSDIR
 	done
 
 else
@@ -19,6 +19,6 @@ else
 	do
 		BNAME=$(basename $SCHEME)
 		echo " => $BNAME"
-		cp $SCHEME $SYSCSDIR
+		cp -v $SCHEME $SYSCSDIR
 	done
 fi
